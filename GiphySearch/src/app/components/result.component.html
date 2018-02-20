@@ -1,0 +1,24 @@
+<div *ngIf="searchResults.length >0 ">
+
+  <div class="row">
+    <div class="col-lg-4 col-md-6" *ngFor="let r of searchResults">
+      <div class="card border-success mb-3">
+      <div class="card-header">
+        <div *ngIf="isLoggedIn">
+          <div *ngIf="r.isFavorite">
+            <img src="{{ ADDED_ICON }}" alt="SAVED" class="favorite" (click)="removeFromMyList(r)">
+          </div>
+          <div *ngIf="!r.isFavorite">
+            <img src="{{ FAVORITE_ICON }}" alt="SAVE" class="favorite" (click)="saveToMyList(r)">
+          </div>
+
+        </div>
+      </div>
+      <div class="card-body text-secondary">
+        <img class="result-image" src="{{ r.url }}">
+      </div>
+      </div>
+    </div>
+  </div>
+
+</div>

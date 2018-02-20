@@ -1,0 +1,30 @@
+<div *ngIf="totalCount>0">
+  <div class="row">
+    <div class="col-lg-3 col-md-3 col-sm-12 text-cute">{{ totalCount }} search images found</div>
+    <div class="col-6 col-md-6 col-sm-12 ">
+      <ul class="pagination pagination-sm justify-content-center">
+        <li class="page-item" [class.disabled]="currentPage == 1">
+          <a class="page-link" href="#" (click)="previousPage()">&laquo;</a>
+        </li>
+        <li class="page-item" *ngFor="let p of pageRange"
+            [class.active]="p == currentPage">
+          <a class="page-link" href="#" (click)="jumpToPage(p)">{{ p }}</a>
+        </li>
+        <li class="page-item" [class.disabled]="currentPage == totalPages">
+          <a class="page-link" href="#" (click)="nextPage()">&raquo;</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-3 col-md-3 col-sm-12  text-right">
+      <label for="resultLimit" class="d-inline text-cute mr-2">results per page: </label>
+      <select class="d-inline" id="resultLimit" name="limit" (change)="changePageLimit($event)">
+        <option value="40" [selected]="isNew">40</option>
+        <option value="80">80</option>
+        <option value="120">120</option>
+        <option value="160">160</option>
+        <option value="200">200</option>
+      </select>
+    </div>
+  </div>
+
+</div>

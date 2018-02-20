@@ -1,0 +1,21 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <div class="col-12 mt-4 row">
+    <div class="col-6 d-inline">
+      <h1>Giphy for Gif</h1>
+    </div>
+    <div class="col-6 d-inline text-right mt-2">
+      <a [routerLink]="['/']" class="mr-3"><img src="{{ SEARCH_ICON }}"> Search</a>
+      <a [routerLink]="['/account']" class="mr-3"><img src="{{ ACCOUNT_ICON }}"> Account</a>
+      <a [routerLink]="['/account', userEmail]" class="text-success"  *ngIf="isLoggedIn" (click)="showSavedImages()"><img src="{{ SAVED_ICON }}"> Saved({{ totalCount }})</a>
+    </div>
+  </div>
+  <hr>
+  <router-outlet></router-outlet>
+  <br>
+  <app-panel></app-panel>
+  <br>
+  <app-result></app-result>
+
+</div>
+
