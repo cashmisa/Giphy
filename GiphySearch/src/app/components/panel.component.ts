@@ -48,10 +48,10 @@ export class PanelComponent implements OnInit, OnDestroy {
         this.accountSrv.getImagesByEmail(data).subscribe(
           (result) => {
             this.isNew = true;
-            this.perPage = 40;
             this.totalCount = result['count'];
-            this.totalPages = Math.floor(this.totalCount / this.perPage + 1);
-            this.generatePageRange(this.currentPage = 1);
+            this.totalPages = 1;
+            this.pageRange = [1];
+            this.currentPage = 1;
           },
           (error) => {
             console.log('>>>search error :', error);

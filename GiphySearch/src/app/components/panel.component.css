@@ -1,3 +1,6 @@
 .text-cute {
   color: rgba(230, 153, 168, 1)
 }
+a.disabled{
+  pointer-events: none;
+}
