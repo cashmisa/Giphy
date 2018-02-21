@@ -15,6 +15,8 @@ export class ResultComponent implements OnInit, OnDestroy {
 
   readonly FAVORITE_ICON = '/assets/favorite.png';
   readonly ADDED_ICON = '/assets/favorite-added.png';
+  readonly FAVORITE_LG_ICON = '/assets/favorite-lg.png';
+  readonly REMOVE_LG_ICON = '/assets/favorite-remove-lg.png';
 
   private searchSub: Subscription;
   private limitSub: Subscription;
