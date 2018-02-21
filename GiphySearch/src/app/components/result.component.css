@@ -2,6 +2,10 @@
   float: right
 }
 
+label.text-cute {
+  color: rgba(230, 153, 168, 1)
+}
+
 .card-body {
   height:15rem;
   text-align: center;

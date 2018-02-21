@@ -18,11 +18,11 @@
               <div class="middle">
                   <div *ngIf="r.isFavorite">
                       <img src="{{ REMOVE_LG_ICON }}" alt="Remove" (click)="removeFromMyList(r)">
-                      <label class="text text-secondary">Remove from favorite</label>
+                      <label class="text text-warning">Remove from favorite</label>
                     </div>
                     <div *ngIf="!r.isFavorite">
                       <img src="{{ FAVORITE_LG_ICON }}" alt="Save" (click)="saveToMyList(r)">
-                      <p class="text text-cute">Add to favorite</p>
+                      <label class="text text-cute">Add to favorite</label>
                     </div>
               </div>
             </div>
